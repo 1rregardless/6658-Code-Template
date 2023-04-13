@@ -9,10 +9,10 @@ import com.khubla.telnet.shell.command.AbstractTelnetCommandRegistry;
 
 /** Add your docs here. */
 public class ConfigCommandRegistry extends AbstractTelnetCommandRegistry {
-    public static ConfigCommandRegistry currentRegistry;
+    public static ConfigCommandRegistry currentRegistry = new ConfigCommandRegistry();
     public ConfigCommandRegistry () {
         addCommand(new QuitCommand());
-        currentRegistry = this;
+        
     }
 
 }
