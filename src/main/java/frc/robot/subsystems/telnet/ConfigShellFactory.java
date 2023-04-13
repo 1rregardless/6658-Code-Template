@@ -14,7 +14,7 @@ import com.khubla.telnet.shell.ShellFactory;
 public class ConfigShellFactory implements ShellFactory {
     @Override
     public Shell createShell (NVT nvt) {
-        return new ConfigShell(nvt, new ConfigCommandRegistry(), null);
+        return new ConfigShell(nvt, ConfigCommandRegistry.currentRegistry, null);
     }
     @Override
     public NVTSpy getNVTSpy() {
