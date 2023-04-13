@@ -7,11 +7,14 @@ package frc.robot.subsystems.telnet;
 import com.khubla.telnet.shell.basic.command.QuitCommand;
 import com.khubla.telnet.shell.command.AbstractTelnetCommandRegistry;
 
+import frc.robot.subsystems.ModePicker;
+
 /** Add your docs here. */
 public class ConfigCommandRegistry extends AbstractTelnetCommandRegistry {
     public static ConfigCommandRegistry currentRegistry = new ConfigCommandRegistry();
     public ConfigCommandRegistry () {
         addCommand(new QuitCommand());
+    
         
     }
 
