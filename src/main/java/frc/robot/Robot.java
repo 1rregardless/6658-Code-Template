@@ -9,7 +9,9 @@ import com.khubla.telnet.TelnetServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import frc.robot.subsystems.telnet.AutonomousPickCommand;
 import frc.robot.subsystems.telnet.ConfigShellFactory;
+import frc.robot.subsystems.telnet.HelpCommand;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -25,6 +27,9 @@ public class Robot extends TimedRobot {
   private final int c_Threads = 2;
   private final TelnetServer server = new TelnetServer(c_Port, c_Threads, new ConfigShellFactory());
 
+  private HelpCommand help = new HelpCommand();
+  private AutonomousPickCommand picker = new AutonomousPickCommand(0, "auton, autonomous, set_autonomous, set_auton", 
+                                                                                                                                    "Changes the Autonomous mode. 0 for default, 1 for middle, 2 for left");
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
