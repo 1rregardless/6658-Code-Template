@@ -21,7 +21,7 @@ public class ConfigShell extends CommandOrientedShellImpl {
     }
     @Override
     public void onConnect() throws IOException {
-        //getNvt().getNvtStream().writeln("Welcome to the 6658 Robot Configuration Shell.");
+        getNvt().writeln("Welcome to the 6658 Robot Configuration Shell.");
 
     }
     @Override
